@@ -1,7 +1,7 @@
 class name_sequence extends uvm_sequence #(name_seq_item);
     `uvm_object_utils(name_sequence)
     
-    function new(string name);
+    function new(string name = "name_sequence");
         super.new(name);
     endfunction
 

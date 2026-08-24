@@ -4,4 +4,4 @@ package name_pkg;
     
     //include all svh files
 
-endpackage : SmartFridge_pkg
+endpackage : name_pkg

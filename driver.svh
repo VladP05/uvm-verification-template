@@ -1,4 +1,4 @@
-class name_driver extends uvm_driver #(name_seq);
+class name_driver extends uvm_driver #(name_seq_item);
     virtual name_if vif;
     
     `uvm_component_utils(name_driver)
@@ -9,7 +9,7 @@ class name_driver extends uvm_driver #(name_seq);
 
     function void build_phase(uvm_phase phase);
         super.build_phase(phase);
-        if(!uvm_config_db#(virtual SmartFridge_interface)::get(this, "", "vif", vif)) begin
+        if(!uvm_config_db#(virtual name_if)::get(this, "", "vif", vif)) begin
             `uvm_fatal("NO_VIF", {"Virtual interface must be set for:", get_full_name(), ".vif"});
         end
         

@@ -14,7 +14,7 @@ module tb_top();
 
     initial begin
 
-        uvm_config_db #(virtual name_if)::set(null, "*", "vif", name_if);
+        uvm_config_db #(virtual name_if)::set(null, "*", "vif", /*vif_instance_name*/);
 
         run_test("test"); //change!!
 

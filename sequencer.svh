@@ -1,4 +1,4 @@
-class name_sequencer extends uvm_sequencer #(name_seq);
+class name_sequencer extends uvm_sequencer #(name_seq_item);
     `uvm_component_utils(name_sequencer)
     
     function new(string name, uvm_component parent);

@@ -13,7 +13,7 @@ class name_monitor extends uvm_monitor;
     function void build_phase(uvm_phase phase);
 
         super.build_phase(phase);
-        if(!uvm_config_db#(virtual SmartFridge_interface)::get(this, "", "vif", vif)) begin
+        if(!uvm_config_db#(virtual name_if)::get(this, "", "vif", vif)) begin
             `uvm_fatal("NO_VIF", {"Virtual interface must be set for:", get_full_name(), ".vif"});
         end
 

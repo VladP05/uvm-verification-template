@@ -3,7 +3,7 @@ class name_seq_item extends uvm_sequence_item;
 
     //signals
 
-    function new(string name);
+    function new(string name = "name_seq_item");
         super.new(name);
     endfunction
 
