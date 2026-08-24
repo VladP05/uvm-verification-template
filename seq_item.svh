@@ -9,4 +9,4 @@ class name_seq extends uvm_sequence_item;
 
     //constraints
 
-endclass : name
+endclass : name_seq
