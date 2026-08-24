@@ -1,31 +1,35 @@
-class name_driver extends uvm_driver #(name_seq);
-    virtual name_if vif;
+class name_monitor extends uvm_monitor;
+    `uvm_component_utils(name_monitor)
     
-    `uvm_component_utils(name_driver)
+    virtual name_if vif;
+
+    uvm_analysis_port #(name_seq_item) item_collected_port;
 
     function new(string name, uvm_component parent);
         super.new(name, parent);
+        item_collected_port = new("item_collected_port", this);
     endfunction
 
     function void build_phase(uvm_phase phase);
+
         super.build_phase(phase);
         if(!uvm_config_db#(virtual SmartFridge_interface)::get(this, "", "vif", vif)) begin
             `uvm_fatal("NO_VIF", {"Virtual interface must be set for:", get_full_name(), ".vif"});
         end
-        
+
     endfunction : build_phase
 
     virtual task run_phase(uvm_phase phase);
         
-       //initialize all input interface signals with 0
-        
-        forever begin
-            seq_item_port.get_next_item(req);
-            
-            //driver logic
+        name_seq_item item;
 
-            seq_item_port.item_done();
+        forever begin
+           
+           //create name_seq_item object
+           //monitor logic
+
         end
+
     endtask : run_phase
 
-endclass : name_driver
+endclass : name_monitor
