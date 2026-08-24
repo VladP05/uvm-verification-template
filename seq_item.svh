@@ -1,5 +1,5 @@
-class name_seq extends uvm_sequence_item;
-    `uvm_object_utils(name_seq)
+class name_seq_item extends uvm_sequence_item;
+    `uvm_object_utils(name_seq_item)
 
     //signals
 
@@ -9,4 +9,4 @@ class name_seq extends uvm_sequence_item;
 
     //constraints
 
-endclass : name_seq
+endclass : name_seq_item
