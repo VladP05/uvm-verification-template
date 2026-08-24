@@ -16,7 +16,7 @@ All UVM components are already registered with the factory and the TLM analysis 
 
 --- How to use it
 1. Clone the repository into your project folder.
-2. Search and replace the `name_` prefix in all file names and class names with your specific module name (e.g., `spi_` or `axi_`).
+2. Search and replace the `name_` prefix in all file names and class names with your specific module name.
 3. Define your DUT signals inside `interface.sv`.
 4. Add your variables and constraints in the sequence item.
 5. Fill in the `run_phase` logic for your driver and monitor.
