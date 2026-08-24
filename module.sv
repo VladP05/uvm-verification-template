@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module SmartFridge #(
+module name #(
     //parametrization
 )(
     //inputs
@@ -10,4 +10,4 @@ module SmartFridge #(
 
     //module logic
 
-endmodule
+endmodule : name
