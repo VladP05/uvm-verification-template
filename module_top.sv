@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module name #(
+module module_top #(
     //parametrization
 )(
     //inputs
@@ -10,4 +10,4 @@ module name #(
 
     //module logic
 
-endmodule : name
+endmodule : module_top
