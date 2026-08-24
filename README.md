@@ -22,4 +22,4 @@ All UVM components are already registered with the factory and the TLM analysis 
 5. Fill in the `run_phase` logic for your driver and monitor.
 
 --- Requirements
-You will need a SystemVerilog simulator that supports the UVM library (Questa, Xcelium, Vivado, etc.).
+You will need a SystemVerilog simulator that supports the UVM library.
